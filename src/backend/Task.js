@@ -10,7 +10,7 @@ class Task {
 
   //Getter
   getStatus() {
-    return this.status == false ? "Complete" : "Incomplete";
+    return this.status ? "Complete" : "Incomplete";
   }
 
   // Setters
