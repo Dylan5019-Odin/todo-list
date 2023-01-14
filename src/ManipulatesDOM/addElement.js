@@ -1,3 +1,4 @@
+//Function to make it easier to create elements and set values
 const addElement = (
   elementType,
   parentDiv,
