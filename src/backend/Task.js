@@ -1,19 +1,17 @@
 
 class Task {
-
-
-
-  constructor(title, description, dueDate, priority) {
+  constructor(title, description, dueDate, priority, project = "default") {
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
+    this.project = project;
     this.status = false;
   }
 
   //Getter
   getStatus() {
-    return (this.status == false ? "Complete" : "Incomplete");
+    return this.status == false ? "Complete" : "Incomplete";
   }
 
   // Setters
@@ -33,10 +31,13 @@ class Task {
     this.dueDate = dueDate;
   }
 
+  setProject(project) {
+    this.project = project;
+  }
+
   setStatus(status) {
     this.status = status;
   }
-
 }
 
 
