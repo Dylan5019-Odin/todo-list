@@ -1,0 +1,16 @@
+.taskDiv {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+}
+
+.task {
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 25px;
+    width: 300px;
+}
+
+.task-header {
+    border-bottom: 1px solid black;
+}

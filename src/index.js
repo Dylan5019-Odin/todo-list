@@ -1,5 +1,7 @@
 import Task from "./backend/Task";
 import filterTasks from "./backend/filterTasks";
+import displayTasks from "./ManipulatesDOM/displayTasks";
+import "./style.css";
 
 let item = new Task(
   "Clean up",
@@ -32,4 +34,7 @@ tasks.push(item4);
 
 let projects = filterTasks(tasks);
 
-console.table(projects);
+//console.table(projects);
+
+
+displayTasks(projects[1]);
