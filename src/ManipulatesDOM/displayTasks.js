@@ -8,7 +8,7 @@ const displayTasks = (projectTasks) => {
 
   // Get content-container and create the Div to contain all the task
   let content = document.getElementById("content");
-  let taskDiv = addElement("div", content, "", "taskDiv");
+  let taskDiv = addElement("div", content, "", "task-div");
 
   //Creates each indiviudual task
   for (let i = 0; i < taskListLength; i++) {

@@ -3,11 +3,13 @@ const addElement = (
   elementType,
   parentDiv,
   textContent = "",
-  classList = ""
+  classList = "",
+  id = "",
 ) => {
   let temp = document.createElement(elementType);
   temp.textContent = textContent;
   temp.classList = classList;
+  temp.id = id;
   parentDiv.append(temp);
 
   return temp;
