@@ -1,4 +1,3 @@
-
 class Task {
   constructor(title, description, dueDate, priority, project = "default") {
     this.title = title;
@@ -39,8 +38,5 @@ class Task {
     this.status = status;
   }
 }
-
-
-
 
 export default Task;
