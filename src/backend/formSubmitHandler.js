@@ -9,16 +9,15 @@ const formSubmitHandler = (allTask) => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    // Create a new Task Based on information in the Form
     let inputs = form.getElementsByTagName("input");
-    console.log(allTask);
     let newTask = retriveFormData(inputs, form);
     allTask.addTask(newTask);
-   
+
+    // Refilter the allTask and Display the new filteredTask;
     let filteredTasks = filterTasks(allTask.taskList);
     document.getElementById("content").innerHTML = "";
     displayController(filteredTasks, allTask[0]);
-
-
   });
 };
 
