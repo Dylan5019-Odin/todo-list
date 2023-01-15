@@ -1,4 +1,4 @@
-import displayHTML from "./displayController";
+import displayController from "./displayController";
 
 const switchProject = (projectTasks) => {
   let numOfProjects = projectTasks.length;
@@ -9,7 +9,7 @@ const switchProject = (projectTasks) => {
       for (let i = 0; i < numOfProjects; i++) {
         if (projectTasks[i].checkProject(btn.id)) {
           document.getElementById("content").innerHTML = "";
-          displayHTML(projectTasks, projectTasks[i]);
+          displayController(projectTasks, projectTasks[i]);
         }
       }
     });

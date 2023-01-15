@@ -31,7 +31,11 @@ class Task {
   }
 
   set project(newProject) {
-    this._project = newProject;
+    if (newProject == "") {
+      this._project = "Default";
+    } else {
+      this._project = newProject;
+    }
   }
 
   set status(newStatus) {

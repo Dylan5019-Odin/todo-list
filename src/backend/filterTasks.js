@@ -9,7 +9,7 @@ const filterTasks = (allTasks) => {
     let temp = new ProjectTaskList(projectNames[i]);
 
     let tasks = allTasks.filter((task) => {
-      return task._project == projectNames[i];
+      return task._project.toLowerCase() == projectNames[i].toLowerCase();
     });
 
     tasks.forEach((task) => {

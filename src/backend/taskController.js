@@ -25,7 +25,7 @@ const taskController = () => {
 
   let filteredTasks = filterTasks(allTask.taskList);
 
-  return filteredTasks;
+  return [allTask, filteredTasks];
 };
 
 export default taskController;

@@ -23,7 +23,7 @@ const retriveFormData = (inputs, form) => {
         dueDate = input.value;
         break;
       case "project":
-        project = input.value;
+        project = input.value.charAt(0).toUpperCase() + input.value.slice(1).toLowerCase();
         break;
       default:
         break;

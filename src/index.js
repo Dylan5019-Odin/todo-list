@@ -4,7 +4,6 @@ import formSubmitHandler from "./backend/formSubmitHandler";
 import "./style.css";
 
 
-let sortedProjects = taskController();
-console.log(sortedProjects);
-displayController(sortedProjects);
-formSubmitHandler();
+let [allTask, filteredTasks] = taskController();
+displayController(filteredTasks);
+formSubmitHandler(allTask);
