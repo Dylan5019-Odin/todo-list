@@ -9,33 +9,33 @@ class Task {
   }
 
   //Getter
-  getStatus() {
-    return this.status ? "Complete" : "Incomplete";
+  get status() {
+    return this._status ? "Complete" : "Incomplete";
   }
 
   // Setters
-  setPriority(priority) {
-    this.priority = priority;
+  set priority(newPriority) {
+    this._priority = newPriority;
   }
 
-  setTitle(title) {
-    this.title = title;
+  set title(newTitle) {
+    this._title = newTitle;
   }
 
-  setDescription(description) {
-    this.description = description;
+  set description(newDescription) {
+    this._description = newDescription;
   }
 
-  setDueDate(dueDate) {
-    this.dueDate = dueDate;
+  set dueDate(newDueDate) {
+    this._dueDate = newDueDate;
   }
 
-  setProject(project) {
-    this.project = project;
+  set project(newProject) {
+    this._project = newProject;
   }
 
-  setStatus(status) {
-    this.status = status;
+  set status(newStatus) {
+    this._status = newStatus;
   }
 }
 

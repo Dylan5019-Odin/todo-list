@@ -1,5 +1,6 @@
 import retriveFormData from "./retrieveFormData";
 
+//Creates and Adds a new Task when the form is submited
 const formSubmitHandler = () => {
   let form = document.getElementById("new-form-div");
 

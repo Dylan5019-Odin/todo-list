@@ -3,7 +3,8 @@ import switchProject from "./switchProject";
 import displayTasks from "./displayTasks";
 import addTaskForm from "./addTaskForm";
 
-const displayHTML = (projects, filterdTask = projects[0]) => {
+// Controls what HTML is Displayed on the page
+const displayController = (projects, filterdTask = projects[0]) => {
   displayButtons(projects);
   switchProject(projects);
 
@@ -12,7 +13,7 @@ const displayHTML = (projects, filterdTask = projects[0]) => {
     ? displayTasks(filterdTask)
     : displayTasks(projects[0]);
 
-    addTaskForm();
+   addTaskForm();
 };
 
-export default displayHTML;
+export default displayController;

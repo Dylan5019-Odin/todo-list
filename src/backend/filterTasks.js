@@ -1,16 +1,20 @@
-import ProjectTasks from "./ProjectTaskList";
+import ProjectTaskList from "./ProjectTaskList";
 
 //A Function that creates a TaskList for each unqiue Project
 const filterTasks = (allTasks) => {
   const groupedProjects = [];
-  const projectNames = [...new Set(allTasks.map((task) => task.project))];
+  const projectNames = [...new Set(allTasks.map((task) => task._project))];
 
   for (let i = 0; i < projectNames.length; i++) {
+    let temp = new ProjectTaskList(projectNames[i]);
+
     let tasks = allTasks.filter((task) => {
-      return task.project == projectNames[i];
+      return task._project == projectNames[i];
     });
 
-    let temp = new ProjectTasks(projectNames[i], tasks);
+    tasks.forEach((task) => {
+      temp.addTask(task);
+    });
 
     groupedProjects.push(temp);
   }

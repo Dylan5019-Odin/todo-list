@@ -1,36 +1,36 @@
 import Task from "./Task";
 
+
+
+//Retrieves the Values in the Form Input Fields and returns a new task with that information
 const retriveFormData = (inputs, form) => {
   let title = "";
   let description = "";
-  let dueDate;
-  let priority = "";
   let project = "";
+  let dueDate;
+  let priority = form.getElementsByTagName("select")[0].value;
+  let inputsArr = Array.from(inputs);
 
-  priority = form.getElementsByTagName("select")[0].value;
-
-  for (let i = 0; i < inputs.length; i++) {
-    switch (inputs[i].id) {
+  inputsArr.forEach((input) => {
+    switch (input.id) {
       case "title":
-        title = inputs[i].value;
+        title = input.value;
         break;
       case "desc":
-        description = inputs[i].value;
+        description = input.value;
         break;
       case "dueDate":
-        dueDate = inputs[i].value;
+        dueDate = input.value;
         break;
       case "project":
-        project = inputs[i].value;
+        project = input.value;
         break;
       default:
         break;
     }
-  }
+  });
 
-  let newTask = new Task(title, description, dueDate, priority, project);
-  return newTask;
+  return new Task(title, description, dueDate, priority, project);
 };
-
 
 export default retriveFormData;

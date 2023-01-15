@@ -1,6 +1,4 @@
-import addElement from "./addElement";
-import displayHTML from "./displayHTML";
-import displayTasks from "./displayTasks";
+import displayHTML from "./displayController";
 
 const switchProject = (projectTasks) => {
   let numOfProjects = projectTasks.length;
