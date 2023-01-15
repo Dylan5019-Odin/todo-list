@@ -14,3 +14,11 @@
 .task-header {
     border-bottom: 1px solid black;
 }
+
+.new-form-div {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
