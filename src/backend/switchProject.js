@@ -1,6 +1,7 @@
-import displayController from "./displayController";
+import displayController from "../ManipulatesDOM/displayController";
+import taskButtonHandler from "./taskButtonHandler";
 
-const switchProject = (projectTasks) => {
+const switchProject = (projectTasks, allTasks) => {
   let numOfProjects = projectTasks.length;
 
   //Add Event Listener to Swtich Projects
@@ -8,8 +9,8 @@ const switchProject = (projectTasks) => {
     btn.addEventListener("click", () => {
       for (let i = 0; i < numOfProjects; i++) {
         if (projectTasks[i].checkProject(btn.id)) {
-          document.getElementById("content").innerHTML = "";
           displayController(projectTasks, projectTasks[i]);
+          taskButtonHandler(projectTasks, allTasks);
         }
       }
     });

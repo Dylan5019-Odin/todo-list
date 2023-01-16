@@ -1,11 +1,12 @@
 class Task {
-  constructor(title, description, dueDate, priority, project = "Default") {
+  constructor(title, description, dueDate, priority, project = "Default" ) {
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
     this.project = project;
     this.status = false;
+    this.id = "";
   }
 
   //Getter
@@ -40,6 +41,10 @@ class Task {
 
   set status(newStatus) {
     this._status = newStatus;
+  }
+
+  set id(newID) {
+    this._id = newID;
   }
 }
 

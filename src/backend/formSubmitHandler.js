@@ -1,9 +1,8 @@
-import displayController from "../ManipulatesDOM/displayController";
-import filterTasks from "./filterTasks";
 import retriveFormData from "./retrieveFormData";
+import updatePage from "./updatePage";
 
 //Creates and Adds a new Task when the form is submited
-const formSubmitHandler = (allTask) => {
+const formSubmitHandler = (allTasks) => {
   let form = document.getElementById("new-form-div");
 
   form.addEventListener("submit", (e) => {
@@ -12,12 +11,11 @@ const formSubmitHandler = (allTask) => {
     // Create a new Task Based on information in the Form
     let inputs = form.getElementsByTagName("input");
     let newTask = retriveFormData(inputs, form);
-    allTask.addTask(newTask);
-
-    // Refilter the allTask and Display the new filteredTask;
-    let filteredTasks = filterTasks(allTask.taskList);
-    document.getElementById("content").innerHTML = "";
-    displayController(filteredTasks, allTask[0]);
+    
+    // Update the page and adds the new task to allTasks
+    allTasks.addTask(newTask);
+    updatePage(allTasks);
+    
   });
 };
 

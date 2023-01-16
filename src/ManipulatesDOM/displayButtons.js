@@ -1,6 +1,6 @@
 import addElement from "./addElement";
 
-const displayButtons = (projectTasks) => {
+const displayProjectButtons = (projectTasks) => {
   let numOfProjects = projectTasks.length;
 
   // Get content-container and create the Div to contain all the task
@@ -19,4 +19,4 @@ const displayButtons = (projectTasks) => {
   }
 };
 
-export default displayButtons;
+export default displayProjectButtons;

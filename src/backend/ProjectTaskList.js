@@ -12,7 +12,11 @@ class ProjectTaskList {
     this.taskList.push(newTask);
   }
 
-
+  setIds(tasklist) {
+    for (let i = 0; i < tasklist.length; i++) {
+      tasklist[i].id = i;
+    }
+  }
 }
 
 export default ProjectTaskList;
