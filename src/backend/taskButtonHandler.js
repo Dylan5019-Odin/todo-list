@@ -1,10 +1,21 @@
+import ProjectTaskList from "./ProjectTaskList";
+import updatePage from "./updatePage";
+
 const taskButtonHandler = (projectTasks, allTask) => {
   document.querySelectorAll(".task-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      let index = btn.parentElement.id.split("_")[1];
-      let currentProject = btn.id;
+    btn.addEventListener("click", () => {
+      let taskIndex = btn.parentElement.id.split("_")[1];
+      let currentProjectName = btn.id.toLowerCase();
+      let projectIndex = 0;
 
-      console.log(index, currentProject)
+      for (let i = 0; i < projectTasks.length; i++) {
+        if (projectTasks[i].projectName.toLowerCase() == currentProjectName) {
+          projectIndex = i;
+        }
+      }
+
+      allTask.deleteTask(taskIndex);
+      updatePage(allTask, projectIndex);
     });
   });
 };

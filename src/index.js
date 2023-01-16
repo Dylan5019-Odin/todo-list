@@ -19,14 +19,14 @@ let item = new Task(
   "Home"
 );
 let item2 = new Task(
-  "Chores",
+  "Go To Class",
   "Wash the dishes today",
   "1/16/2023",
   "Medium",
   "School"
 );
 let item3 = new Task(
-  "Dishes",
+  "HomeWork",
   "Wash the dishes today",
   "1/16/2023",
   "Medium",

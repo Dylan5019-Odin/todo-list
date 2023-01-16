@@ -17,6 +17,12 @@ class ProjectTaskList {
       tasklist[i].id = i;
     }
   }
+
+  deleteTask(index) {
+   this.tasklist = this.taskList.splice(index, 1);
+  }
+
+
 }
 
 export default ProjectTaskList;

@@ -9,7 +9,7 @@ const switchProject = (projectTasks, allTasks) => {
     btn.addEventListener("click", () => {
       for (let i = 0; i < numOfProjects; i++) {
         if (projectTasks[i].checkProject(btn.id)) {
-          displayController(projectTasks, projectTasks[i]);
+          displayController(allTasks, projectTasks, projectTasks[i]);
           taskButtonHandler(projectTasks, allTasks);
         }
       }

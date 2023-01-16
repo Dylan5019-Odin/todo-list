@@ -4,7 +4,9 @@ import displayTasks from "./displayTasks";
 import addTaskForm from "./addTaskForm";
 
 // Controls what HTML is Displayed on the page
-const displayController = (projects, filter = projects[0]) => {
+const displayController = (allTasks, projects, filter) => {
+
+
   document.getElementById("content").innerHTML = "";
   //If there are no tasks, display only the form
   if (projects.length == 0) {
@@ -13,13 +15,12 @@ const displayController = (projects, filter = projects[0]) => {
   }
 
 
-
   //Displays a Button for each project 
   displayProjectButtons(projects);
-   switchProject(projects);
+  switchProject(projects, allTasks);
  
   //Display the filtered task only if the filter is set
-  if (filter != projects[0]) {
+  if (filter != undefined) {
     displayTasks(filter);
   } else {
     displayTasks(projects[0]);
