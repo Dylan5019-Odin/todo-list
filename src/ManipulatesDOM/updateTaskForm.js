@@ -53,7 +53,7 @@ const updateTaskForm = () => {
   projectInput.type = "text";
   projectInput.name = "project";
 
-  addElement("button", updateformDiv, "Add Task", "form-button", "form-button");
+  addElement("button", updateformDiv, "Add Task", "update-form-button", "update-form-button");
 };
 
 export default updateTaskForm;

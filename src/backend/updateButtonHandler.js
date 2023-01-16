@@ -1,3 +1,5 @@
+//Populates the Update Form with the current data;
+//Also sets the update forms button id to contain releavent data to the current task
 const updateButtonHandler = (projectTask, allTasks) => {
   document.querySelectorAll(".update-task-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -12,9 +14,9 @@ const updateButtonHandler = (projectTask, allTasks) => {
       let oldPriority = currentTask._priority;
       let oldProject = currentTask._project;
       //let oldStatus = currentTask._status;
-      console.log(oldDueDate);
 
       form.getElementsByTagName("select")[0].value = oldPriority;
+      form.getElementsByTagName("button")[0].id = `${oldProject}_${taskIndex}`;
 
       for (let i = 0; i < inputs.length; i++) {
         switch (inputs[i].id) {

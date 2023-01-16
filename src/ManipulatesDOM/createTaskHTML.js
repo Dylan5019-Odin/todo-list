@@ -10,7 +10,7 @@ const createTaskHTML = (parentDiv, task) => {
   addElement("p", taskCard, `${task._dueDate}`);
   addElement("p", taskCard, `${task._priority}`);
   addElement("p", taskCard, `${task._project}`);
-  addElement("p", taskCard, `${task._status}`);
+  addElement("p", taskCard, `${task.getStatus()}`);
   addElement(
     "button",
     taskCard,
@@ -23,6 +23,13 @@ const createTaskHTML = (parentDiv, task) => {
     taskCard,
     "Update",
     "update-task-btn",
+    `${task._project}`
+  );
+  addElement(
+    "button",
+    taskCard,
+    "Toggle Status",
+    "status-task-btn",
     `${task._project}`
   );
 };

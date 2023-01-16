@@ -1,6 +1,9 @@
 import displayController from "../ManipulatesDOM/displayController";
 import deleteButtonHandler from "./deleteButtonHandler";
 import updateButtonHandler from "./updateButtonHandler";
+import updateTaskHandler from "./updateTaskHandler";
+import toggleStatus from "./toggleStatus";
+
 
 const switchProject = (projectTasks, allTasks) => {
   let numOfProjects = projectTasks.length;
@@ -13,6 +16,8 @@ const switchProject = (projectTasks, allTasks) => {
           displayController(allTasks, projectTasks, projectTasks[i]);
           deleteButtonHandler(projectTasks, allTasks);
           updateButtonHandler(projectTasks, allTasks);
+          updateTaskHandler(projectTasks, allTasks);
+          toggleStatus(projectTasks, allTasks);
         }
       }
     });

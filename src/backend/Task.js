@@ -1,5 +1,5 @@
 class Task {
-  constructor(title, description, dueDate, priority, project = "Default" ) {
+  constructor(title, description, dueDate, priority, project = "Default") {
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
@@ -10,7 +10,7 @@ class Task {
   }
 
   //Getter
-  get status() {
+  getStatus() {
     return this._status ? "Complete" : "Incomplete";
   }
 
@@ -40,7 +40,7 @@ class Task {
   }
 
   set status(newStatus) {
-    this._status = newStatus;
+    this._status = !newStatus;
   }
 
   set id(newID) {

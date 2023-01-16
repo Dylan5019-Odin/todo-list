@@ -3,6 +3,8 @@ import displayController from "../ManipulatesDOM/displayController";
 import formSubmitHandler from "./formSubmitHandler";
 import deleteButtonHandler from "./deleteButtonHandler";
 import updateButtonHandler from "./updateButtonHandler";
+import updateTaskHandler from "./updateTaskHandler";
+import toggleStatus from "./toggleStatus";
 
 const updatePage = (allTasks, index) => {
   allTasks.setIds(allTasks.taskList);
@@ -12,8 +14,9 @@ const updatePage = (allTasks, index) => {
 
   //Event Listeners
 
- 
   formSubmitHandler(allTasks);
+  updateTaskHandler(filteredTasks, allTasks);
+  toggleStatus(filteredTasks, allTasks);
   updateButtonHandler(filteredTasks, allTasks);
   deleteButtonHandler(filteredTasks, allTasks);
 };

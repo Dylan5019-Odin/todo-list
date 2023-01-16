@@ -22,10 +22,11 @@ class ProjectTaskList {
     this.tasklist = this.taskList.splice(index, 1);
   }
 
-  updateTask(index, updatedTask) {
-    this.tasklist[index] = updatedTask;
-  }
+  updateTask(index, tasklist, updatedTask) {
+    tasklist[index] = updatedTask;
 
+    this.tasklist = tasklist;
+  }
 }
 
 export default ProjectTaskList;
