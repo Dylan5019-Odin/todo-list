@@ -1,8 +1,7 @@
-import ProjectTaskList from "./ProjectTaskList";
 import updatePage from "./updatePage";
 
-const taskButtonHandler = (projectTasks, allTask) => {
-  document.querySelectorAll(".task-btn").forEach((btn) => {
+const deleteButtonHandler = (projectTasks, allTask) => {
+  document.querySelectorAll(".delete-task-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       let taskIndex = btn.parentElement.id.split("_")[1];
       let currentProjectName = btn.id.toLowerCase();
@@ -20,4 +19,4 @@ const taskButtonHandler = (projectTasks, allTask) => {
   });
 };
 
-export default taskButtonHandler;
+export default deleteButtonHandler;

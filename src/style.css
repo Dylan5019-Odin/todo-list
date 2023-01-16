@@ -15,7 +15,8 @@
     border-bottom: 1px solid black;
 }
 
-.new-form-div {
+.new-form-div,
+.update-from-div {
     
     display: flex;
     align-items: center;

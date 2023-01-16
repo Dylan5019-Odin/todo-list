@@ -2,6 +2,7 @@ import displayProjectButtons from "./displayButtons";
 import switchProject from "../backend/switchProject";
 import displayTasks from "./displayTasks";
 import addTaskForm from "./addTaskForm";
+import updateTaskForm from "./updateTaskForm"
 
 // Controls what HTML is Displayed on the page
 const displayController = (allTasks, projects, filter) => {
@@ -27,7 +28,8 @@ const displayController = (allTasks, projects, filter) => {
   }
 
   //Display the Add task Form under the tasks
-  addTaskForm();
+ addTaskForm();
+ updateTaskForm();
 };
 
 export default displayController;

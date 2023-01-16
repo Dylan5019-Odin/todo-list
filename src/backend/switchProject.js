@@ -1,5 +1,6 @@
 import displayController from "../ManipulatesDOM/displayController";
-import taskButtonHandler from "./taskButtonHandler";
+import deleteButtonHandler from "./deleteButtonHandler";
+import updateButtonHandler from "./updateButtonHandler";
 
 const switchProject = (projectTasks, allTasks) => {
   let numOfProjects = projectTasks.length;
@@ -10,7 +11,8 @@ const switchProject = (projectTasks, allTasks) => {
       for (let i = 0; i < numOfProjects; i++) {
         if (projectTasks[i].checkProject(btn.id)) {
           displayController(allTasks, projectTasks, projectTasks[i]);
-          taskButtonHandler(projectTasks, allTasks);
+          deleteButtonHandler(projectTasks, allTasks);
+          updateButtonHandler(projectTasks, allTasks);
         }
       }
     });

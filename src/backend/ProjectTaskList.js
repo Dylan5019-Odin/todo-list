@@ -19,9 +19,12 @@ class ProjectTaskList {
   }
 
   deleteTask(index) {
-   this.tasklist = this.taskList.splice(index, 1);
+    this.tasklist = this.taskList.splice(index, 1);
   }
 
+  updateTask(index, updatedTask) {
+    this.tasklist[index] = updatedTask;
+  }
 
 }
 

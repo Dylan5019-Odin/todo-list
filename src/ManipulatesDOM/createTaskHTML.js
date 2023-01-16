@@ -11,7 +11,20 @@ const createTaskHTML = (parentDiv, task) => {
   addElement("p", taskCard, `${task._priority}`);
   addElement("p", taskCard, `${task._project}`);
   addElement("p", taskCard, `${task._status}`);
-  addElement("button", taskCard, "Delete", "task-btn", `${task._project}`);
+  addElement(
+    "button",
+    taskCard,
+    "Delete",
+    "delete-task-btn",
+    `${task._project}`
+  );
+  addElement(
+    "button",
+    taskCard,
+    "Update",
+    "update-task-btn",
+    `${task._project}`
+  );
 };
 
 export default createTaskHTML;

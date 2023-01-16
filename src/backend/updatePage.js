@@ -1,7 +1,8 @@
 import filterTasks from "./filterTasks";
 import displayController from "../ManipulatesDOM/displayController";
 import formSubmitHandler from "./formSubmitHandler";
-import taskButtonHandler from "./taskButtonHandler";
+import deleteButtonHandler from "./deleteButtonHandler";
+import updateButtonHandler from "./updateButtonHandler";
 
 const updatePage = (allTasks, index) => {
   allTasks.setIds(allTasks.taskList);
@@ -11,8 +12,10 @@ const updatePage = (allTasks, index) => {
 
   //Event Listeners
 
-  taskButtonHandler(filteredTasks, allTasks);
+ 
   formSubmitHandler(allTasks);
+  updateButtonHandler(filteredTasks, allTasks);
+  deleteButtonHandler(filteredTasks, allTasks);
 };
 
 export default updatePage;
