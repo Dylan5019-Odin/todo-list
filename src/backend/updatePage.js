@@ -5,7 +5,7 @@ import deleteButtonHandler from "./deleteButtonHandler";
 import updateButtonHandler from "./updateButtonHandler";
 import updateTaskHandler from "./updateTaskHandler";
 import toggleStatus from "./toggleStatus";
-
+import "../style.css";
 const updatePage = (allTasks, index) => {
   allTasks.setIds(allTasks.taskList);
   let filteredTasks = filterTasks(allTasks.taskList);

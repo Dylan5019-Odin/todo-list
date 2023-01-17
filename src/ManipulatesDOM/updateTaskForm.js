@@ -1,4 +1,5 @@
 import addElement from "./addElement";
+import "../style.css";
 
 const updateTaskForm = () => {
   // Add a div to contain the form
@@ -7,11 +8,11 @@ const updateTaskForm = () => {
     "form",
     content,
     "",
-    "update-form-div",
+    "update-form",
     "update-form-div"
   );
 
-  let titleLabel = addElement("label", updateformDiv, "UTitle");
+  let titleLabel = addElement("label", updateformDiv, "Title");
   titleLabel.htmlFor = "title";
   let titleInput = addElement("input", updateformDiv, "", "title-input", "title");
   titleInput.type = "text";
@@ -53,7 +54,9 @@ const updateTaskForm = () => {
   projectInput.type = "text";
   projectInput.name = "project";
 
-  addElement("button", updateformDiv, "Add Task", "update-form-button", "update-form-button");
+  addElement("button", updateformDiv, "Update", "update-form-button", "update-form-button");
+
+  updateformDiv.style["visibility"] = "hidden";
 };
 
 export default updateTaskForm;

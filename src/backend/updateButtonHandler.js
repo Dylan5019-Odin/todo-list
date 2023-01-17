@@ -1,11 +1,17 @@
+
 //Populates the Update Form with the current data;
 //Also sets the update forms button id to contain releavent data to the current task
 const updateButtonHandler = (projectTask, allTasks) => {
+
   document.querySelectorAll(".update-task-btn").forEach((btn) => {
+
     btn.addEventListener("click", () => {
       let taskIndex = btn.parentElement.id.split("_")[1];
       let currentTask = allTasks.taskList[taskIndex];
       let form = document.getElementById("update-form-div");
+      let addform = document.getElementById("new-form-div");
+      form.style["visibility"] = "visible";
+      addform.style["visibility"] = "hidden";
       let inputs = form.getElementsByTagName("input");
 
       let oldTitle = currentTask._title;

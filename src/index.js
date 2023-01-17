@@ -33,9 +33,18 @@ let item3 = new Task(
   "School"
 );
 
+
+
 allTask.addTask(item);
 allTask.addTask(item2);
 allTask.addTask(item3);
+allTask.addTask(item3);
+allTask.addTask(item3);
+allTask.addTask(item3);
+allTask.addTask(item3);
+allTask.addTask(item3);
+allTask.addTask(item3);
+
 
 
 

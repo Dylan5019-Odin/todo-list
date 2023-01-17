@@ -1,25 +1,106 @@
+body {
+  background: #306BAC;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #E5DCC5;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+     border-top: 1px solid;
+     padding: 12px;
+}
+
+.btn-div button {
+  background: #F8C630;
+  height: 40px;
+  width: 100px;
+  margin: 0 0 20px 0px;
+ 
+}
+
+/* CSS For Task */
+
 .task-div {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    place-items: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  place-items: center;
 }
 
 .task {
-    text-align: center;
-    border: 1px solid black;
-    margin-bottom: 25px;
-    width: 300px;
+  display: flex;
+  text-align: center;
+  background: #721817;
+  margin-bottom: 25px;
+  min-width: 80vw;
+  border: 1px solid;
+  padding: 5px;
+  box-shadow: 5px 10px #141B41;
+  overflow: hidden;
 }
 
-.task-header {
-    border-bottom: 1px solid black;
+.task button {
+
+  background: #F8C630;
+  border-radius: 10px;
+  height: 40px;
+  width: 100px;
 }
+
+.task-header-div {
+  display: flex;
+  padding: 25px;
+  border-right: 1px solid black;
+  font-size: 1rem;
+}
+
+.task-body-div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+}
+
+.task-desc {
+  font-size: 1.5rem;
+}
+
+.task-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+}
+
+
+.task-btns {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+
+/* CSS For Forms */
+
+
 
 .new-form-div,
-.update-from-div {
-    
+.update-form {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 12px;
+    background-color:#721817;
+    padding: 25px;
+   
 }
 
+.update-form {
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+ 
+}
