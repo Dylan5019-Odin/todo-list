@@ -1,3 +1,3 @@
 # todo-list
-A Simple Todo List app that I created, with the intention of keeping my  
-project more orginized. 
+A simple Todo List app. The main goal was to learn more  
+about keeping projects organized by seperating DOM Manipulation and backend Logic. 
