@@ -19,6 +19,8 @@ const updatePage = (allTasks, index) => {
   toggleStatus(filteredTasks, allTasks);
   updateButtonHandler(filteredTasks, allTasks);
   deleteButtonHandler(filteredTasks, allTasks);
+
+
 };
 
 export default updatePage;
